@@ -8,7 +8,7 @@ import { useColors } from 'colorPicker/useColors';
 
 const App = () => {
 
-  const { color, colorList, handleChangeColor, handleSubmitSaveColor } = useColors();
+  const { color, colorList, handleChangeColor, handleSubmitSaveColor, handleClickClearColors } = useColors();
 
   return (
     <>
@@ -16,7 +16,7 @@ const App = () => {
       <div className="container mt-4">
         <div className="row">
           <div className="col-12 col-md-4">
-            <ColorList colorList={colorList} />
+            <ColorList colorList={colorList} handleClickClearColors={handleClickClearColors} />
           </div>
           <div className="col-12 col-md-8">
             <ColorPicker color={color} handleChangeColor={handleChangeColor} handleSubmitSaveColor={handleSubmitSaveColor} />
